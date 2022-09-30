@@ -1,12 +1,13 @@
 // componente logion
 // componenter de registro
 import { useState } from "react";
-import { useAuth } from "../context/authContext";
+import { useAuth,loginWhithGoogle } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+
 
 export function Login() {
   const [user, setUser] = useState({ email: "", password: "" });
-  const { login, loginWithGoogle } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState();
   const handleChange = ({ target: { name, value } }) => {
@@ -36,13 +37,8 @@ export function Login() {
   
   
   const handleGoogleSignin = async () =>{
-    await loginWithGoogle()
-    .then(function(response ){ 
-      console.log('respons')
-    })
-    .cath(function(error){
-      console.log('error')
-    })
+    await loginWhithGoogle()
+   
     navigate('/')
   } 
 
@@ -68,7 +64,7 @@ export function Login() {
         <button>Login</button>
       </form>
 
-      <button onClick={handleGoogleSignin}>Login con google</button>
+      <button onClick={loginWhithGoogle}>Login con google</button>
     </div>
   );
 }
