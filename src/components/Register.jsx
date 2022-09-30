@@ -7,6 +7,7 @@ export function Register() {
   const [user, setUser] = useState({ email: "", password: "" });
   const { signup } = useAuth();
   const navigate = useNavigate();
+  const [error, setError] = useState();
   const handleChange = ({ target: { name, value } }) => {
     setUser({ ...user, [name]: value });
   };
@@ -16,15 +17,23 @@ export function Register() {
     try {
       await signup(user.email, user.password);
       navigate("/");
+      setError('');
     } catch (error) {
-      console.log(error);
+      console.log(error.code);
+      if (error.code === 'auth/invalid-email'){
+        setError('Mensaje del servidor: mail o clave incorrecta')
+        document.getElementByName('password').style.backgroundColor = 'red';
+      }
+
+      // setError(error.message);
     }
 
     // console.log(user);
   };
 
   return (
-    //<div>Register</div>
+    <div>
+      {error && <p>{error}</p> }
     <form onSubmit={handleSubmit}>
       <label htmlFor=""></label>
       <input
@@ -43,5 +52,6 @@ export function Register() {
 
       <button>Registrar</button>
     </form>
+    </div>
   );
 }
