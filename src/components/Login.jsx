@@ -46,16 +46,16 @@ export function Login() {
     }
   };
 
-  const handleResetPassword = async() => {
+  const handleResetPassword = async () => {
     console.log("first");
     if (!user.email) return setError("Ingrese tu email");
-      try {
-        await resetPassword(user.email)
-        setError('enviamos un email a tu cuanta para recuperar password')
-      } catch (error) {
-        setError(error.message)
-      }
-    
+    try {
+      await resetPassword(user.email);
+      setError("enviamos un email a tu cuanta para recuperar password");
+    } catch (error) {
+      setError(error.message);
+    }
+
     console.log("resetsssssss");
   };
 
@@ -67,6 +67,7 @@ export function Login() {
         className="bg-white shadow-md rounded 
         px-8 pt-6 pb-8 mb-4"
       >
+      
         <div className="mb-4">
           <label htmlFor="">Email</label>
           <input
@@ -86,6 +87,7 @@ export function Login() {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2"
           placeholder="password"
         />
+       
         <div className="flex items-center justify-between">
           <button className="bg-blue-500 hover:bg-blue-800 text-white text-sm font-bold py-2 px-4 rounded ">
             Login
