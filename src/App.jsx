@@ -1,6 +1,7 @@
 // import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./components/Home";
+import Header from "./components/layout/header/Header";
 import { Login } from "./components/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Register } from "./components/Register";
@@ -10,8 +11,8 @@ function App() {
   return (
     <>
     
-      <div className="bg-slate-300 h-screen text-black flex ">
-        <AuthProvider>
+      <div className=" h-screen text-black flex ">
+        <AuthProvider>          
           <Routes>
             <Route
               path="/"
