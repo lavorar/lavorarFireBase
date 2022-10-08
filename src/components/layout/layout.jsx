@@ -1,13 +1,16 @@
 import React from "react"
-import Header from "./header/Header"
+import AppHeader from "./header/AppHeader"
 import Footer from "./footer/Footer"
 import SideBar from "./sidebar/SideBar";
+import NavMobile from "./footer/NavMobile";
 
 const Layout = (props) => {
     return (
         <>
+            
             <SideBar />
             <Footer />
+            <NavMobile />
         </>
     )
 }

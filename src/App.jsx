@@ -11,15 +11,13 @@ function App() {
   return (
     <>
     
-      <div className=" h-screen text-black flex ">
+      <div className="flex justify-center w-auto md:mx-40 mx-[0.15rem] mt-28 md:mt-32 md:mb-96 p-4 rounded-lg bg-gray-50  dark:bg-gray-600  h-5/6 text-black ">
         <AuthProvider>          
           <Routes>
             <Route
               path="/"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
+              element={                
+                  <Home />                
               }
             />
             <Route path="/login" element={<Login />} />

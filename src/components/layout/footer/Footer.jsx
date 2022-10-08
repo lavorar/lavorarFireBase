@@ -1,15 +1,15 @@
 import React from 'react'
 const Footer = (props) => {
     return (
-        <footer className="fixed p-4 bg-white sm:p-6 z-50 bottom-0 w-full dark:bg-gray-900">
+        <footer className="md:relative p-4 bg-gray-100 sm:p-6 z-50 bottom-0 w-full dark:bg-gray-800">
             <div className="md:flex md:justify-between md:px-24">
                 <div className="mb-6 md:mb-0">
-                    <a href="https://flowbite.com/" className="flex items-center">
-                        <img src="https://flowbite.com/docs/images/logo.svg" className="mr-3 h-8" alt="FlowBite Logo" />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                    <a href="https://flowbite.com/" className="flex items-center"> 
+                        <img src="./src/assets/Lavorar-logo-negativo.svg" className="mr-3 w-14" alt="LAvorar Logo" />
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Lavorar</span>
                     </a>
                 </div>
-                <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div className="grid grid-cols-2 gap-8 justify-items-center items-center sm:gap-6 sm:grid-cols-3">
                     <div>
                         <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                         <ul className="text-gray-600 dark:text-gray-400">
@@ -39,7 +39,7 @@ const Footer = (props) => {
                                 <a href="#" className="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline">Terms &amp; Conditions</a>
+                                <a href="#" className="hover:underline">a</a>
                             </li>
                         </ul>
                     </div>
