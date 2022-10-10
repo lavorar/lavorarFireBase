@@ -10,23 +10,16 @@ import { AuthProvider } from "./context/authContext";
 function App() {
   return (
     <>
-    
       <div className="flex justify-center w-auto md:mx-40 mx-[0.15rem] mt-28 md:mt-32 md:mb-96 p-4 rounded-lg bg-gray-50  dark:bg-gray-600  h-5/6 text-black ">
-        <AuthProvider>          
+        <AuthProvider>
           <Routes>
-            <Route
-              path="/"
-              element={                
-                  <Home />                
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
         </AuthProvider>
       </div>
     </>
-    
   );
 }
 
