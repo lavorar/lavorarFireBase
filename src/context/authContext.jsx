@@ -42,7 +42,7 @@ export function AuthProvider({ children }) {
     signInWithEmailAndPassword(auth, email, password);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const logout = () => signOut(auth);
+  const logout = () => {signOut(auth)};
 
   useEffect(() => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
