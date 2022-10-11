@@ -15,8 +15,8 @@ import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
-import {useAuth} from '../../../context/authContext';
-import {useNavigate} from 'react-router-dom';
+import { useAuth } from '../../../context/authContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const SideBar = (props) => {
@@ -24,14 +24,14 @@ const SideBar = (props) => {
     const navigate = useNavigate('/')
     const [open, setOpen] = useState(true);
     const Menus = [
-        { title: "Inicio", src: <HomeRoundedIcon fontSize={'large'} />, always: true, href: '/'},
+        { title: "Inicio", src: <HomeRoundedIcon fontSize={'large'} />, always: true, href: '/' },
         { title: "Explorar", src: <ExploreRoundedIcon fontSize={'large'} />, always: true },
         { title: "Mi Perfil", src: <PersonRoundedIcon fontSize={'large'} />, always: user ? true : false, gap: true },
         { title: "Guardado", src: <BookmarkOutlinedIcon fontSize={'large'} />, always: user ? true : false },
         { title: "Mis Trabajos", src: <WorkRoundedIcon fontSize={'large'} />, always: user ? true : false },
         { title: "Horario y Agenda", src: <EventAvailableRoundedIcon fontSize={'large'} />, always: user ? true : false },
         { title: "Ayuda", src: <HelpRoundedIcon fontSize={'large'} />, always: true },
-        { title: "Ganancias", src: <AddchartRoundedIcon fontSize={'large'} />, always: user ? true : false , gap: true },
+        { title: "Ganancias", src: <AddchartRoundedIcon fontSize={'large'} />, always: user ? true : false, gap: true },
         { title: "Estadisticas", src: <TrendingUpRoundedIcon fontSize={'large'} />, always: user ? true : false },
 
     ];
@@ -46,7 +46,7 @@ const SideBar = (props) => {
                     className={`absolute cursor-pointer group -right-5 top-11
                             rounded-full  ${!open && "rotate-180"}`}>
                     <IconWithButton
-                        onClick={() => setOpen(!open)}                        
+                        onClick={() => setOpen(!open)}
                     >
                         <ArrowBackIosNewRoundedIcon fontSize="small" />
                     </IconWithButton>
@@ -69,41 +69,44 @@ const SideBar = (props) => {
                 <ul className="pt-6">
                     {Menus.map((Menu, index) => (
                         Menu.always ?
-                        <li
-                            key={index}
-                                className={`flex rounded-md p-2 ${open ? '':''} group cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white-ghost text-md items-center gap-x-2
+                            <li
+                                key={index}
+                                className={`flex rounded-md p-2 ${open ? '' : ''} group cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white-ghost text-md items-center gap-x-2
                         ${Menu.gap ? "mt-9" : "mt-2"}
                                 } `}
-                        >
-                            <div 
-                            onClick={() => {Menu.href ? navigate(Menu.href) : ''}}
-                            className={`cursor-pointer  duration-300  text-gray-900  dark:text-white-ghost`}>
-                                <IconWithButton                                    
-                                >
-                                    {Menu.src}
-                                </IconWithButton>
+                            >
+                                <div
+                                    onClick={() => { Menu.href ? navigate(Menu.href) : '' }}
+                                    className={`cursor-pointer  duration-300  text-gray-900  dark:text-white-ghost`}>
+                                    <IconWithButton
+                                    >
+                                        {Menu.src}
+                                    </IconWithButton>
+                                </div>
+
+                                <span className={`${open ? 'block' : "hidden"} whitespace-nowrap origin-left duration-700`}>
+                                    {Menu.title}
+                                </span>
+
+                            </li>
+                            :
+                            <div key={index}>
                             </div>
-
-                            <span className={`${open? 'block' : "hidden" } whitespace-nowrap origin-left duration-700`}>
-                                {Menu.title}
-                            </span>
-
-                        </li>
-                        :
-                        <div  key={index}>
-                        </div>
                     ))}
                 </ul>
             </div>
-            <div className={`${open ? 'md:pl-64' : 'md:pl-24'} pr-96 duration-300 w-full  h-screen  md:flex-1 `}>
-                <Header>
+            <div className={`${open ? 'md:pl-64' : 'md:pl-24'} flex flex-row p-2 md:p-0  duration-300 w-full md:ml-2 h-auto  md:flex-1 `}>
+                <div className="w-9/12">
+                    <Header>
 
-                </Header>
-                <App> </App>
+                    </Header>
+                    <App> </App>
+
+                </div>
                 {/* <AppHeader /> */}
-            </div>
-            <div className={'w-96 h-full right-0 fixed z-30 bg-gray-700 border-0 border-l border-gray-100'} >
-                                    right side
+                <div className={'w-3/12  h-auto bg-gray-700 text-white-ghost ml-2 p-1 border-l border-gray-100'} >
+                    right side
+                </div>
             </div>
         </div >
     );
