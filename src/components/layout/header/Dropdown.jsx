@@ -5,10 +5,19 @@ import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import LogoutIcon from '@mui/icons-material/Logout';
 import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
 import { useAuth } from "../../../context/authContext";
+import { useNavigate } from 'react-router-dom';
 
 export default function Example(props) {
     const { user, logout, loading } = useAuth();
-
+    const navigate = useNavigate("/")
+    const handleLogout = async () => {
+        try {
+            await logout();
+        } catch {
+            console.log(error);
+        }
+         navigate("/");
+    };
     return (
         <div className="text-right">
             <Menu as="div" className="relative inline-block text-left">
@@ -16,7 +25,7 @@ export default function Example(props) {
                     <>
                         <div>
                             <Menu.Button
-                                className={`  ${open ? 'text-blue-600 dark:text-blue-600' : 'dark:bg-gray-700'} inline-flex w-full justify-center rounded-full bg-gray-300 dark:bg-gray-700 dark:hover:bg-black px-2 py-2 text-sm font-medium text-gray-900 dark:text-white-ghost hover:bg-gray-200  focus:outline-1 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}>
+                                className={`  ${open ? 'text-blue-600 dark:text-blue-500 dark:bg-gray-200' : ''} inline-flex w-full justify-center rounded-full bg-gray-300 dark:bg-gray-700 dark:hover:bg-black px-2 py-2 text-sm font-medium text-gray-900 dark:text-white-ghost hover:bg-gray-200  focus:outline-1 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}>
                                 {props.children}
 
                             </Menu.Button>
@@ -78,6 +87,7 @@ export default function Example(props) {
                                     <Menu.Item>
                                         {({ active }) => (
                                             <button
+                                                onClick={handleLogout}
                                                 className={`${active ? 'bg-gray-300 dark:bg-gray-700 dark:bg-100 ' : ' '}  group flex w-full items-center rounded-md px-2 py-2 text-md  text-gray-900 dark:text-white-ghost`}
                                             >
                                                 <div className={`rounded-full mr-3 ${active ? 'bg-gray-100 dark:bg-black ' : 'bg-gray-300 dark:bg-gray-600'} h-9 w-9 p-1 text-gray-900 dark:text-white-ghost`}>
@@ -94,14 +104,15 @@ export default function Example(props) {
                                 }
                                 {
                                     !user ?
-                                    <div className="px-1 py-1 ">
+                                    <div className="py-3 px-7 ">
                                     <Menu.Item>
                                         {({ active }) => (
-                                            <button
-                                                className={`${active ? 'bg-gray-300 dark:bg-gray-700 dark:bg-100 ' : ' '}  group flex w-full items-center rounded-md px-2 py-2 text-md  text-gray-900 dark:text-white-ghost`}
+                                            <button  
+                                                onClick={() => [navigate('/login')]}                                            
+                                                className={`${active ? 'bg-opacity-90  ' : ' '}  group flex w-full items-center rounded-full px-10 py-2 text-md bg-[#0343F5] bg-gradient bg-gradient-to-l text-white-ghost`}
                                             >
-                                                <div className={`rounded-full mr-3 ${active ? 'bg-gray-100 dark:bg-black ' : 'bg-gray-300 dark:bg-gray-600'} h-9 w-9 p-1 text-gray-900 dark:text-white-ghost`}>     
-                                                <LoginRoundedIcon />                                               
+                                                <div className={`rounded-full mr-3 ${active ? ' ' : 'bg-[#0343F5]'} h-9 w-9 p-1 text-white-ghost`}>     
+                                                    <LoginRoundedIcon />                                               
                                                 </div>
                                                 Iniciar Sesion
                                             </button>

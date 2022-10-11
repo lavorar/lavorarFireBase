@@ -9,7 +9,7 @@ const Layout = (props) => {
         <>
             
             <SideBar />
-            <Footer />
+            {/* <Footer /> */}
             <NavMobile />
         </>
     )

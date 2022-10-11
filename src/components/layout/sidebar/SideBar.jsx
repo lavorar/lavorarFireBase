@@ -8,20 +8,35 @@ import IconWithButton from "../elements/IconWithButton"
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
+import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
+import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
+import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
+import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
+import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
+import {useAuth} from '../../../context/authContext';
+
 const SideBar = (props) => {
+    const { user, logout, loading } = useAuth();
     const [open, setOpen] = useState(true);
     const Menus = [
-        { title: "Inicio", src: <HomeRoundedIcon fontSize={open ? "large" : "medium"} /> },
-        { title: "Explorar", src: <ExploreRoundedIcon fontSize={open ? "large" : "medium"} /> },
-        { title: "Mi Perfil", src: <PersonRoundedIcon fontSize={open ? "large" : "medium"} />, gap: true },
+        { title: "Inicio", src: <HomeRoundedIcon fontSize={'medium'} />, always: true},
+        { title: "Explorar", src: <ExploreRoundedIcon fontSize={'medium'} />, always: true },
+        { title: "Mi Perfil", src: <PersonRoundedIcon fontSize={'medium'} />, always: user ? true : false, gap: true },
+        { title: "Guardado", src: <BookmarkOutlinedIcon fontSize={'medium'} />, always: user ? true : false },
+        { title: "Mis Trabajos", src: <WorkRoundedIcon fontSize={'medium'} />, always: user ? true : false },
+        { title: "Horario y Agenda", src: <EventAvailableRoundedIcon fontSize={'medium'} />, always: user ? true : false },
+        { title: "Ayuda", src: <HelpRoundedIcon fontSize={'medium'} />, always: true },
+        { title: "Ganancias", src: <AddchartRoundedIcon fontSize={'medium'} />, always: user ? true : false , gap: true },
+        { title: "Estadisticas", src: <TrendingUpRoundedIcon fontSize={'medium'} />, always: user ? true : false },
 
     ];
 
     return (
-        <div className="flex bg-gray-200 dark:bg-gray-900">
+        <div className="flex flex-col bg-gray-100 dark:bg-gray-900">
             <div
-                className={` ${open ? "w-72" : "w-24 "
-                    } hidden md:block bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white-ghost h-full p-5 z-20 fixed pt-8  duration-300`}
+                className={` ${open ? "w-64" : "w-24 "
+                    } hidden md:block bg-transparent border-0 border-r border-gray-500 dark:border-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost h-full p-5 z-20 fixed pt-8  duration-300`}
             >
                 <div
                     className={`absolute cursor-pointer group -right-4 top-[4em] 
@@ -54,10 +69,11 @@ const SideBar = (props) => {
                 </div>
                 <ul className="pt-6">
                     {Menus.map((Menu, index) => (
+                        Menu.always ?
                         <li
                             key={index}
-                            className={`flex rounded-md p-2 group cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white-ghost text-md items-center gap-x-4 
-              ${Menu.gap ? "mt-9" : "mt-2"}
+                            className={`flex rounded-md p-2 group cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white-ghost text-md items-center gap-x-2
+                        ${Menu.gap ? "mt-9" : "mt-2"}
                                 } `}
                         >
                             <div className={`cursor-pointer  duration-300  text-gray-900  dark:text-white-ghost`}>
@@ -67,21 +83,24 @@ const SideBar = (props) => {
                                 </IconWithButton>
                             </div>
 
-                            <span className={`${!open && "hidden"} origin-left duration-200`}>
+                            <span className={`${open? 'block' : "hidden" } whitespace-nowrap origin-left duration-700`}>
                                 {Menu.title}
                             </span>
 
                         </li>
+                        :
+                        <div  key={index}>
+                        </div>
                     ))}
                 </ul>
             </div>
-            <div className={` ${open ? 'md:pl-72 ':'md:pl-24'} 
-                 duration-300 h-screen flex-1 m-3`}>
+            <div className={` ${open ? 'md:pl-52 ':'md:pl-24'} 
+                 duration-300 h-screen flex-1 m-3 `}>
                 <Header>
 
                 </Header>
-                {/* <AppHeader /> */}
                 <App> </App>
+                {/* <AppHeader /> */}
             </div>
         </div >
     );

@@ -12,6 +12,7 @@ import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import { useAuth } from "../../../context/authContext";
+import App from '../../../App';
 
 const Header = (props) => {
   const { user, logout, loading } = useAuth();
@@ -48,8 +49,8 @@ const Header = (props) => {
 
   return (
     <>
-      <nav className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white-ghost px-2 sm:px-4 py-2.5 fixed w-full z-10 top-0 left-0">
-        <div className="container flex justify-between md:justify-end  items-center mx-auto px-2">
+      <nav className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost px-2 sm:px-4 p-0 fixed w-full z-10 top-0 left-0">
+        <div className="container flex justify-between md:justify-end h-14 items-center mx-auto px-2">
           <a href="https://flowbite.com/" className="flex items-center md:invisible ">
             <img src="./src/assets/Lavorar-logo-negativo.svg" className="mr-6 w-16" alt="LAvorar Logo" />
             <span className="self-center text-xl font-semibold whitespace-nowrap hidden dark:text-white">Flowbite</span>
@@ -61,7 +62,7 @@ const Header = (props) => {
 
               <IconWithButton>
                 {<Badge badgeContent={4} color="primary">
-                  <ChatRoundedIcon fontSize='large' />
+                  <ChatRoundedIcon fontSize='medium' />
                 </Badge>}
               </IconWithButton>
             </div>
@@ -80,7 +81,7 @@ const Header = (props) => {
                 }}
               >
                 <Badge badgeContent={4} color="primary">
-                  <NotificationsRoundedIcon fontSize='large' />
+                  <NotificationsRoundedIcon fontSize='medium' />
                 </Badge>
               </IconWithButton>
               <div className={`${openNotification ? "hidden md:block " : "hidden "}  h-52 mt-3 -ml-24  md:absolute md:w-60  justify-between items-center w-full `} id="notificationBar">
@@ -101,7 +102,7 @@ const Header = (props) => {
 
             <div className='mr-4 hidden md:block'>
               <Dropdown>
-                <PersonRoundedIcon fontSize='large' />
+                <PersonRoundedIcon fontSize='medium' />
               </Dropdown>
             </div>
             <div className={`md:hidden`}>
@@ -123,7 +124,7 @@ const Header = (props) => {
                         },
                       },
                     }}
-                    fontSize='large' />
+                    fontSize='medium' />
 
                   :
 
@@ -139,7 +140,7 @@ const Header = (props) => {
                         },
                       },
                     }}
-                    fontSize='large' />}
+                    fontSize='medium' />}
               </IconWithButton>
             </div>
 
@@ -192,6 +193,7 @@ const Header = (props) => {
           </ul>
         </div>
       </nav>
+      
     </>
   )
 }

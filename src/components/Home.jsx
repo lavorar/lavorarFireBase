@@ -14,7 +14,7 @@ export function Home() {
     } catch {
       console.log(error);
     }
-    navigate("/login");
+    navigate("/");
   };
 
   if (loading) return <h1>Loading...</h1>;
