@@ -37,29 +37,24 @@ const SideBar = (props) => {
     ];
 
     return (
-        <div className="flex md:flex-col bg-gray-100 dark:bg-gray-900">
+        <div className="flex md:flex-row bg-gray-100 dark:bg-gray-900">
             <div
-                className={` ${open ? "w-64" : "w-28 "
-                    } hidden md:block bg-transparent border-0 border-r border-gray-500 dark:border-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost h-full p-5 z-20 fixed pt-8  duration-300`}
+                className={` ${open ? "w-64" : "w-24 "
+                    } hidden md:flex  flex-col bg-transparent border-0 border-r border-gray-500 dark:border-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost h-full p-3 z-20 fixed pt-8  duration-300`}
             >
                 <div
-                    className={`absolute cursor-pointer group -right-4 top-[4em] 
+                    className={`absolute cursor-pointer group -right-5 top-11
                             rounded-full  ${!open && "rotate-180"}`}>
                     <IconWithButton
-                        onClick={() => setOpen(!open)}
-                        label="close"
-                        hoverBackgroundColor={'#e5e7eb'}
-                        backgroundColor={'#d1d5db'}
-                        color={(theme) => theme.palette.grey[900]}
-                        icon={<ArrowBackIosNewRoundedIcon />}
+                        onClick={() => setOpen(!open)}                        
                     >
-                        <ArrowBackIosNewRoundedIcon />
+                        <ArrowBackIosNewRoundedIcon fontSize="small" />
                     </IconWithButton>
                 </div>
-                <div className="flex gap-x-4 ml-1 items-center ">
+                <div className="flex flex-row gap-x-2 justify-start items-center ">
                     <img
                         src="./src/assets/Lavorar-logo-negativo.svg"
-                        className={`cursor-pointer duration-500 ${open ? "w-20" : "w-16 "
+                        className={`cursor-pointer duration-500 ${open ? "w-20" : "w-14 ml-1 "
                             } ${open && "rotate-[360deg] "
                             }`}
                     />
@@ -76,7 +71,7 @@ const SideBar = (props) => {
                         Menu.always ?
                         <li
                             key={index}
-                            className={`flex rounded-md p-2 group cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white-ghost text-md items-center gap-x-2
+                                className={`flex rounded-md p-2 ${open ? '':''} group cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-900 dark:text-white-ghost text-md items-center gap-x-2
                         ${Menu.gap ? "mt-9" : "mt-2"}
                                 } `}
                         >
@@ -100,12 +95,15 @@ const SideBar = (props) => {
                     ))}
                 </ul>
             </div>
-            <div className={` md:pl-52 duration-500 w-full h-screen  md:flex-1 `}>
+            <div className={`${open ? 'md:pl-64' : 'md:pl-24'} pr-96 duration-300 w-full  h-screen  md:flex-1 `}>
                 <Header>
 
                 </Header>
                 <App> </App>
                 {/* <AppHeader /> */}
+            </div>
+            <div className={'w-96 h-full right-0 fixed z-30 bg-gray-700 border-0 border-l border-gray-100'} >
+                                    right side
             </div>
         </div >
     );

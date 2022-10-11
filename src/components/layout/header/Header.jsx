@@ -49,7 +49,7 @@ const Header = (props) => {
 
   return (
     <>
-      <nav className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost px-2 sm:px-4 p-0 sticky w-full z-10 top-0 py-1 left-0">
+      <nav className="bg-gray-100  dark:bg-gray-900 text-gray-900 dark:text-white-ghost px-2 sm:px-4 p-0 sticky w-full z-10 top-0 py-1 left-0">
         <div className="container flex justify-between md:justify-end h-16 items-center mx-auto px-2">
           <a href="https://flowbite.com/" className="flex items-center md:invisible ">
             <img src="./src/assets/Lavorar-logo-negativo.svg" className="mr-6 w-16" alt="LAvorar Logo" />
