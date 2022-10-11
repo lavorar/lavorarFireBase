@@ -49,20 +49,20 @@ const Header = (props) => {
 
   return (
     <>
-      <nav className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost px-2 sm:px-4 p-0 fixed w-full z-10 top-0 left-0">
-        <div className="container flex justify-between md:justify-end h-14 items-center mx-auto px-2">
+      <nav className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost px-2 sm:px-4 p-0 sticky w-full z-10 top-0 py-1 left-0">
+        <div className="container flex justify-between md:justify-end h-16 items-center mx-auto px-2">
           <a href="https://flowbite.com/" className="flex items-center md:invisible ">
             <img src="./src/assets/Lavorar-logo-negativo.svg" className="mr-6 w-16" alt="LAvorar Logo" />
             <span className="self-center text-xl font-semibold whitespace-nowrap hidden dark:text-white">Flowbite</span>
           </a>
-          <div className="flex md:order-2">
+          <div className="flex md:order-2 ">
 
             { user ?              
-              <div className='mr-2 hidden md:block group'>
+              <div className='mr-2  hidden md:block group'>
 
               <IconWithButton>
                 {<Badge badgeContent={4} color="primary">
-                  <ChatRoundedIcon fontSize='medium' />
+                  <ChatRoundedIcon fontSize='large' />
                 </Badge>}
               </IconWithButton>
             </div>
@@ -81,7 +81,7 @@ const Header = (props) => {
                 }}
               >
                 <Badge badgeContent={4} color="primary">
-                  <NotificationsRoundedIcon fontSize='medium' />
+                    <NotificationsRoundedIcon fontSize='large' />
                 </Badge>
               </IconWithButton>
               <div className={`${openNotification ? "hidden md:block " : "hidden "}  h-52 mt-3 -ml-24  md:absolute md:w-60  justify-between items-center w-full `} id="notificationBar">
@@ -102,7 +102,7 @@ const Header = (props) => {
 
             <div className='mr-4 hidden md:block'>
               <Dropdown>
-                <PersonRoundedIcon fontSize='medium' />
+                <PersonRoundedIcon fontSize='large' />
               </Dropdown>
             </div>
             <div className={`md:hidden`}>
@@ -124,7 +124,7 @@ const Header = (props) => {
                         },
                       },
                     }}
-                    fontSize='medium' />
+                    fontSize='large' />
 
                   :
 
@@ -140,7 +140,7 @@ const Header = (props) => {
                         },
                       },
                     }}
-                    fontSize='medium' />}
+                    fontSize='large' />}
               </IconWithButton>
             </div>
 

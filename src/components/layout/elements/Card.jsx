@@ -6,12 +6,10 @@ import ButtonCard from "./ButtonCard";
 
 const Card = (props) => {
   return (
-    <div className="relative mt-3 overflow-ellipsis w-full min-w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">
-      <div className="absolute justify-self-center top-2 right-2  text-orange-brand ">
-        $1500/hr
-      </div>
+    <div className="inline-block mt-3 overflow-ellipsis w-full min-w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md ">
+      
       <div className="flex flex-col mx-2 pb-2 mt-3">
-        <div className="flex flex-row mx-2">
+        <div className="flex flex-wrap flex-row mx-2">
           <img
             className="mb-5 w-14 h-14 p-4 rounded-full shadow-lg bg-zinc-500 "
             src="logo.png"
@@ -25,8 +23,10 @@ const Card = (props) => {
             <div className="flex justify-between pl-1 pt-2">
               <LocationOnIcon fontSize="small" /> <div className="text-sm">Neuquen,neuquen</div>
             </div>
-          </div>
-          
+          </div>          
+            <div className="flex justify-end pl-5  text-orange-brand ">
+              $1500/hr
+            </div>
 
         </div>
         

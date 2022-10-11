@@ -78,6 +78,236 @@ export function Login() {
             onChange={handleChange}
           />
         </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div><div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div><div className="mb-4">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@dominio.com"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            onChange={handleChange}
+          />
+        </div>
+        
 
         <label htmlFor="">Password</label>
         <input

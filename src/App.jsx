@@ -10,7 +10,7 @@ import { AuthProvider } from "./context/authContext";
 function App() {
   return (
     <>    
-      <div className="flex justify-center w-auto md:mx-40  mt-16 md:mt-[5rem] md:mb-10 p-4 rounded-lg bg-gray-50  dark:bg-gray-600  h-screen   text-black ">
+      <div className="flex justify-center w-auto md:mx-40  mt-16 md:mt-24 md:mb-10 p-4 rounded-lg bg-gray-50 min-h-screen dark:bg-gray-800  h-auto   text-black ">
         <AuthProvider>          
           <Routes>
             <Route

@@ -24,22 +24,22 @@ const SideBar = (props) => {
     const navigate = useNavigate('/')
     const [open, setOpen] = useState(true);
     const Menus = [
-        { title: "Inicio", src: <HomeRoundedIcon fontSize={'medium'} />, always: true, href: '/'},
-        { title: "Explorar", src: <ExploreRoundedIcon fontSize={'medium'} />, always: true },
-        { title: "Mi Perfil", src: <PersonRoundedIcon fontSize={'medium'} />, always: user ? true : false, gap: true },
-        { title: "Guardado", src: <BookmarkOutlinedIcon fontSize={'medium'} />, always: user ? true : false },
-        { title: "Mis Trabajos", src: <WorkRoundedIcon fontSize={'medium'} />, always: user ? true : false },
-        { title: "Horario y Agenda", src: <EventAvailableRoundedIcon fontSize={'medium'} />, always: user ? true : false },
-        { title: "Ayuda", src: <HelpRoundedIcon fontSize={'medium'} />, always: true },
-        { title: "Ganancias", src: <AddchartRoundedIcon fontSize={'medium'} />, always: user ? true : false , gap: true },
-        { title: "Estadisticas", src: <TrendingUpRoundedIcon fontSize={'medium'} />, always: user ? true : false },
+        { title: "Inicio", src: <HomeRoundedIcon fontSize={'large'} />, always: true, href: '/'},
+        { title: "Explorar", src: <ExploreRoundedIcon fontSize={'large'} />, always: true },
+        { title: "Mi Perfil", src: <PersonRoundedIcon fontSize={'large'} />, always: user ? true : false, gap: true },
+        { title: "Guardado", src: <BookmarkOutlinedIcon fontSize={'large'} />, always: user ? true : false },
+        { title: "Mis Trabajos", src: <WorkRoundedIcon fontSize={'large'} />, always: user ? true : false },
+        { title: "Horario y Agenda", src: <EventAvailableRoundedIcon fontSize={'large'} />, always: user ? true : false },
+        { title: "Ayuda", src: <HelpRoundedIcon fontSize={'large'} />, always: true },
+        { title: "Ganancias", src: <AddchartRoundedIcon fontSize={'large'} />, always: user ? true : false , gap: true },
+        { title: "Estadisticas", src: <TrendingUpRoundedIcon fontSize={'large'} />, always: user ? true : false },
 
     ];
 
     return (
         <div className="flex md:flex-col bg-gray-100 dark:bg-gray-900">
             <div
-                className={` ${open ? "w-64" : "w-24 "
+                className={` ${open ? "w-64" : "w-28 "
                     } hidden md:block bg-transparent border-0 border-r border-gray-500 dark:border-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost h-full p-5 z-20 fixed pt-8  duration-300`}
             >
                 <div
@@ -59,7 +59,7 @@ const SideBar = (props) => {
                 <div className="flex gap-x-4 ml-1 items-center ">
                     <img
                         src="./src/assets/Lavorar-logo-negativo.svg"
-                        className={`cursor-pointer duration-500 ${open ? "w-16" : "w-11 "
+                        className={`cursor-pointer duration-500 ${open ? "w-20" : "w-16 "
                             } ${open && "rotate-[360deg] "
                             }`}
                     />
@@ -100,8 +100,7 @@ const SideBar = (props) => {
                     ))}
                 </ul>
             </div>
-            <div className={` ${open ? 'md:pl-52 ':'md:pl-24'} 
-                  duration-700 min-w-full h-screen  md:flex-1 `}>
+            <div className={` md:pl-52 duration-500 w-full h-screen  md:flex-1 `}>
                 <Header>
 
                 </Header>
