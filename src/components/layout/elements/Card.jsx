@@ -6,32 +6,34 @@ import ButtonCard from "./ButtonCard";
 
 const Card = (props) => {
   return (
-    <div className="inline-block mt-3 overflow-ellipsis w-full max-w-xs bg-white rounded-lg border border-gray-200 shadow-md ">
-      
-      <div className="flex flex-col mx-2 pb-2 mt-3">
-        <div className="flex flex-wrap flex-row mx-2">
-          <img
-            className="mb-5 w-14 h-14 p-4 rounded-full shadow-lg bg-zinc-500 "
-            src="logo.png"
-            alt="img"
-          />
-          <div className="flex flex-col">
-            <div className="flex justify-center pl-1 text-sm">
-              Rubilar Francisco
-              <VerifiedIcon fontSize="small" className="pl-1" />
-            </div>
-            <div className="flex justify-between pl-1 pt-2">
-              <LocationOnIcon fontSize="small" /> <div className="text-sm">Neuquen,neuquen</div>
-            </div>
-          </div>          
-            <div className="flex justify-end pl-5  text-orange-brand ">
-              $1500/hr
-            </div>
+    <div className="inline-block mt-3  overflow-ellipsis w-72 bg-white rounded-lg border border-gray-200 shadow-md ">
 
+      <div className="flex flex-col  mx-1 pb-2 mt-3">
+        <div className="flex  justify-between  mx-2">
+          <div className="flex flex-row">
+            <img
+              className="mb-5 w-14 h-14 p-4 rounded-full shadow-lg bg-zinc-500 "
+              src="logo.png"
+              alt="img"
+            />
+
+            <div className="flex flex-col">
+              <div className="flex justify-center text-sm">
+                Rubilar Francisco
+                <VerifiedIcon fontSize="small" className="pl-1" />
+              </div>
+              <div className="flex justify-between pt-2">
+                <LocationOnIcon fontSize="small" /> <div className="text-sm">Neuquen,neuquen</div>
+              </div>
+            </div>
+          </div>
+          <div className="flex pb-2 text-orange-brand ">
+            $1500/hr
+          </div>
         </div>
-        
+
         <Rating />
-        
+
         <h5 className=" border-0 pt-2 border-t mx-2  border-gray-500 mb-1 px-1 text-base font-medium text-gray-900 dark">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda
           laboriosam, quod aut officiis ea deleniti repellat nisi delectus
@@ -41,7 +43,7 @@ const Card = (props) => {
           <ButtonCard text="Categoria" />
           <ButtonCard text="Categoria" />
           <ButtonCard text="Categoria" />
-        </div>        
+        </div>
 
         <div className="flex flex-wrap mx-2 border-0 pt-2 border-t  border-gray-500 justify-end space-x-3 ">
           <button

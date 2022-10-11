@@ -21,9 +21,21 @@ export function Home() {
 
   if (loading) return <h1>Loading...</h1>;
   return (
-    <div className="flex flex-col  items-center w-full p-5 bg-gray-50 dark:bg-gray-700 text-black">      
+    <div className="flex flex-col  items-center w-full p-1 bg-gray-50 dark:bg-gray-700 text-black">
       <HomeSearchBar />
-      <Card />
+      <div className="mt-10 flex flex-wrap justify-evenly gap-4 lg:gap-8 w-full lg:px-5">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <div className="hidden xl:block">
+          <Card />
+        </div>
+        <div className="hidden xl:block">
+          <Card />
+        </div>
+
+      </div>
     </div>
   );
 }
