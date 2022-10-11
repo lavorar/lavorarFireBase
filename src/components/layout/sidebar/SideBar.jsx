@@ -16,13 +16,15 @@ import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import {useAuth} from '../../../context/authContext';
+import {useNavigate} from 'react-router-dom';
 
 
 const SideBar = (props) => {
     const { user, logout, loading } = useAuth();
+    const navigate = useNavigate('/')
     const [open, setOpen] = useState(true);
     const Menus = [
-        { title: "Inicio", src: <HomeRoundedIcon fontSize={'medium'} />, always: true},
+        { title: "Inicio", src: <HomeRoundedIcon fontSize={'medium'} />, always: true, href: '/'},
         { title: "Explorar", src: <ExploreRoundedIcon fontSize={'medium'} />, always: true },
         { title: "Mi Perfil", src: <PersonRoundedIcon fontSize={'medium'} />, always: user ? true : false, gap: true },
         { title: "Guardado", src: <BookmarkOutlinedIcon fontSize={'medium'} />, always: user ? true : false },
@@ -35,7 +37,7 @@ const SideBar = (props) => {
     ];
 
     return (
-        <div className="flex flex-col bg-gray-100 dark:bg-gray-900">
+        <div className="flex md:flex-col bg-gray-100 dark:bg-gray-900">
             <div
                 className={` ${open ? "w-64" : "w-24 "
                     } hidden md:block bg-transparent border-0 border-r border-gray-500 dark:border-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost h-full p-5 z-20 fixed pt-8  duration-300`}
@@ -78,7 +80,9 @@ const SideBar = (props) => {
                         ${Menu.gap ? "mt-9" : "mt-2"}
                                 } `}
                         >
-                            <div className={`cursor-pointer  duration-300  text-gray-900  dark:text-white-ghost`}>
+                            <div 
+                            onClick={() => {Menu.href ? navigate(Menu.href) : ''}}
+                            className={`cursor-pointer  duration-300  text-gray-900  dark:text-white-ghost`}>
                                 <IconWithButton                                    
                                 >
                                     {Menu.src}
@@ -97,7 +101,7 @@ const SideBar = (props) => {
                 </ul>
             </div>
             <div className={` ${open ? 'md:pl-52 ':'md:pl-24'} 
-                 duration-300 h-screen flex-1 m-3 `}>
+                  duration-700 min-w-full h-screen  md:flex-1 `}>
                 <Header>
 
                 </Header>
