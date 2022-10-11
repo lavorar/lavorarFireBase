@@ -8,6 +8,7 @@ import IconWithButton from "../elements/IconWithButton"
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import PersonRoundedIcon from '@mui/icons-material/PersonRounded';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+
 import BookmarkOutlinedIcon from '@mui/icons-material/BookmarkOutlined';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
 import EventAvailableRoundedIcon from '@mui/icons-material/EventAvailableRounded';
@@ -15,6 +16,7 @@ import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
 import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import {useAuth} from '../../../context/authContext';
+
 
 const SideBar = (props) => {
     const { user, logout, loading } = useAuth();
