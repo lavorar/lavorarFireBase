@@ -1,8 +1,12 @@
 import React from 'react'
 
 const HomeSearchBar = props => {
+    const handleSubmitSearch = (e) => {
+        e.preventDefault()
+
+    }
     return (
-        <form className='max-w-5xl mt-8 h-40 md:h-auto w-full'>
+        <form onSubmit={(e) => handleSubmitSearch(e)} className='max-w-5xl mt-8 h-40 md:h-auto w-full'>
             <div className="inline-flex md:flex-row gap-y-2 flex-col items-center text-gray-300 justify-between p-5 md:pl-5 md:pr-1 shadow md:border-2 h-full md:h-16 w-full py-1 md:rounded-full border-gray-900 dark:border-gray-200" >
                 <div className='flex justify-center w-full md:w-1/2 h-full md:h-[60%] border-gray-900 rounded-full dark:border-white-ghost border md:border-0 md:rounded-none md:border-r md:mr-2 text-black dark:text-white-ghost' >
                     <input className='w-11/12 overflow-clip h-full  bg-transparent outline-none ' placeholder='Categoria' />

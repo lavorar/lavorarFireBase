@@ -17,6 +17,7 @@ import AddchartRoundedIcon from '@mui/icons-material/AddchartRounded';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import { useAuth } from '../../../context/authContext';
 import { useNavigate } from 'react-router-dom';
+import Card from "../elements/Card";
 
 
 const SideBar = (props) => {
@@ -37,7 +38,7 @@ const SideBar = (props) => {
     ];
 
     return (
-        <div className="flex md:flex-row  bg-gray-100 dark:bg-gray-900">
+        <div className="flex md:flex-row h-auto  bg-gray-100 dark:bg-gray-900">
             <div
                 className={` ${open ? "w-64" : "w-24 "
                     } hidden md:flex  flex-col bg-transparent border-0 border-r border-gray-500 dark:border-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white-ghost h-full p-3 z-20 fixed pt-8  duration-300`}
@@ -95,8 +96,8 @@ const SideBar = (props) => {
                     ))}
                 </ul>
             </div>
-            <div className={`${open ? 'md:pl-64' : 'md:pl-24'} flex flex-row justify-around  p-2 md:p-0  duration-300 w-full md:ml-2 h-auto  md:flex-1 `}>
-                <div className="w-full md:w-11/12 xl:w-4/6 ">
+            <div className={`${open ? 'md:pl-64' : 'md:pl-24'} lg:mr-[310px] h-auto flex flex-around p-2 md:p-0  duration-300 w-full md:ml-2   md:flex-1 `}>
+                <div className="w-full lg:px-10">
                     <Header>
 
                     </Header>
@@ -104,9 +105,13 @@ const SideBar = (props) => {
 
                 </div>
                 {/* <AppHeader /> */}
-                <div className={'lg:w-[310px] hidden lg:block  h-auto bg-gray-700 text-white-ghost ml-2 p-1 border-l border-gray-100'} >
-                    right side
-                </div>
+            </div>
+            <div className={'lg:w-[310px] float-right overflow-auto lg:flex-col hidden lg:flex lg:fixed h-screen right-0 bg-gray-700 text-white-ghost ml-2 p-1 border-l border-gray-100'} >
+
+                <Card />
+                <Card />
+                <Card />
+                <Card />
             </div>
         </div >
     );
